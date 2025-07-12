@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../build/assets/css/output.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="preloader" class="fixed inset-0  flex justify-center items-center z-50">
+        <div class="matrix ">
+        </div>
+        <!-- <img src="./assets/img/logo.svg" alt="Loading..." class="w-16 h-16 "> -->
+      </div>
+
+     
+  
+
+        <!-- Matrix animation js start -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const matrixContainer = document.querySelector('.matrix');
+      const columns = Math.floor(window.innerWidth / 20);
+      const rows = Math.floor(window.innerHeight / 20);
+      for (let i = 0; i < columns; i++) {
+        for (let j = 0; j < rows; j++) {
+          const span = document.createElement('span');
+          span.style.left = `${i * 20}px`;
+          span.style.top = `${j * 20}px`;
+          span.style.animationDelay = `${Math.random() * 5}s`;
+          span.textContent = generateRandomCharacter();
+          matrixContainer.appendChild(span);
+        }
+      }
+      function generateRandomCharacter() {
+        const characters = 'ABCDEF0123456789*';
+        return characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+    });
+
+  </script>
+  <!-- Matrix animation js end -->
+</body>
+</html>

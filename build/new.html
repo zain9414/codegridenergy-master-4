@@ -1,0 +1,667 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codegridzero-Home</title>
+  <link rel="icon" type="image/x-icon" href="../build/assets/img/favicon.png">
+
+  <link href="
+  https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+  " rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />  <!-- Shery Js -->
+  <!-- remix icon cdn -->
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+  rel="stylesheet"/>
+
+
+  <link href="./assets/css/output.css" rel="stylesheet">
+
+</head>
+<body>
+
+   <!--Preloader start-->
+  <!-- <div id="preloader" class="fixed inset-0  flex justify-center items-center z-50 ">
+    <div class="matrix ">
+    </div>
+  </div> -->
+  <!-- Preloader end --> 
+  
+  <!-- curser  -->
+  <div id="crsr"></div> 
+
+  <!-- loader  -->
+  <div id="loader" class="matrix 2xl:px-48 xl:px-44 px-6 py-24 xl:py-48">   
+    <div class="">
+    <div class="line">
+        <div id="line1-part1">
+            <h5 class="lg:text-5xl text-2xl">00</h5>
+            <h6 class="lg:text-5xl text-2xl font-thin">- 100</h6>
+        </div>  
+        <h1 class="lg:text-[80px] 2xl:text-9xl md:text-6xl text-3xl font-black uppercase">Your</h1>
+    </div>
+    <div class="line">
+        <h1 class="lg:text-[80px] 2xl:text-9xl md:text-6xl  text-3xl font-black uppercase">Web experiences</h1>
+    </div>
+    <div class="line">
+        <h1 class="lg:text-[80px] 2xl:text-9xl md:text-6xl  text-3xl font-black uppercase "> is Loading right </h1>
+        <h2 class="xl:text-[75px] 2xl:text-8xl lg:text-6xl md:text-4xl text-2xl font-black uppercase">Now</h2>
+    </div>
+    <div class="text-base 2xl:text-xl text-start pl-32 pt-10 font-semibold">
+        Please wait <br> a 
+       few second
+    </div>
+</div>
+</div>
+
+<main>
+<!-- main  -->
+<div id="main" class="bg-[#151515] relative">
+
+           <!-- navbar  -->
+         <div id="page1" class="relative w-full h-[100vh] z-[100]" data-scroll >
+            
+          <div id="nav" class="flex items-center justify-between">
+            <a href="index.html">
+            
+            </a>
+              <div id="nav-part2" class="flex justify-center items-center gap-[3vw]">
+                <a href="work.html">
+                  <h4 class="text-xl font-black"> Works</h4>
+                </a>
+                  <a href="about.html">
+                  <h4 class="text-xl font-black"> About</h4>
+                </a>
+                  <a href="contact.html">
+                  <h4 class="text-xl font-black"> Contacts</h4>
+                </a>
+              </div>    
+          </div>
+
+          <div class="hero md:w-[70%] w-full md:ml-[27%] mx-5  flex items-center z-[999] overflow-hidden " id="hero1">
+              <h1 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center lg:text-start">Featured</h1>
+          </div>
+          <div class="hero md:w-[70%] w-full md:ml-[27%] mx-5  flex items-center z-[999] overflow-hidden" id="hero2">
+              <h1 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center lg:text-start">Works</h1>
+          </div>
+          <div  id="hero3">
+              
+              <!-- <h2 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center lg:text-start">Web/</h2>
+              <h2 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center lg:text-start">Graphic</h2> -->
+              
+          </div>
+          <div id="hero4">
+              <!-- <h1 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center items-center lg:text-start">Experience</h1> -->
+          </div>
+          <!-- <img id="flag" src="https://obys.agency/wp-content/uploads/2022/03/Flag.jpg" alt=""> -->
+      </div>
+
+      <!-- videi section  -->
+      <div id="page2" class="relative w-full h-[100vh]" data-scroll data-scroll-speed="-1">
+        <div id="video-container" class="relative md:left-[28%] w-full md:[1363px] h-[66vh] bg-cover bg-center" style="background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg );">
+            <div id="video-cursor">
+                <i class="ri-play-mini-fill"></i>
+            </div>
+            <!-- <img src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg" alt=""> -->
+            <video  src="/build/assets/img/Obys-Showreel-2022.mp4"></video>
+        </div>
+    </div>
+
+
+
+    <!-- project section  -->
+
+    <div id="page3" class="relative w-full xl:mb-24 px-4 xl:px-10" data-scroll data-scroll-speed="-1">
+        
+      <div id="image-div-container" class="relative flex xl:p-5"> 
+<!-- first rows  -->
+          <div>
+              <h1 class="button xl:text-4xl text-2xl px-5">
+                  <span class="label-up"> OLGA PRUDKA</span>
+                  <span class="label-up"> OLGA PRUDKA</span>
+               </h1>
+          <div class="image-div relative overflow-hidden m-5 lg:w-[22vw] lg:h-[24vw] md:w-[28vw] md:h-[30vw] w-full h-[50vw]">
+              <img src="../build/assets/img/img1-1.jpg" alt="">
+              <img src="../build/assets/img/img1-2.jpg" alt="">
+          </div>
+          <div class="flex justify-between px-5 py-4">
+          <h1 class="xl:text-xl text-base">
+              logo Design, Website Design, <br>
+              Development
+          </h1>
+          <p class="xl:text-xl text-base">2023</p>
+      </div>
+      <hr class="h-[1px] bg-white mx-5">
+      </div>
+
+      <div class="mt-2 md:mt-0">
+          <h1 class="button xl:text-4xl text-2xl px-5">
+              <span class="label-up"> ATM</span>
+              <span class="label-up"> ATM</span>
+           </h1>
+          <div class="image-div relative overflow-hidden m-5 lg:w-[27vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+              <img src="../build/assets/img/img2-1.jpg" alt="">
+              <img src="../build/assets/img/img2-2.jpg" alt="">
+          </div>
+          <div class="flex justify-between px-5 py-4">
+              <h1 class="xl:text-xl text-base">
+                  logo Design, Website Design, <br>
+                  Development
+              </h1>
+              <p class="xl:text-xl text-base">2024</p>
+          </div>
+          <hr class="h-[1px] bg-white mx-5">
+      </div>
+      
+          <div class="hidden lg:block">
+          <div class="page3-circle1 lg:ml-32">
+              <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+                  <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+              <div class="circle-in">
+                  <p class="text-black text-base font-bold">We are thrilled to have you on board. We hope you enjoy the projects 🧡</p>
+              </div>    
+          </div>
+      </div>
+
+          <!-- second row  -->
+          <div class="hidden lg:block">    
+          <div class="page3-circle2">
+              <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+                  <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+                  <div class="circle-in">
+                      <p class="text-black text-base font-bold text-center">Sometimes it can be fun to turn on the crazy mode! 🤪</p>
+                  </div> 
+          </div>
+      </div>
+
+          <div class="pt-20">
+              <h1 class="button xl:text-4xl text-2xl px-5">
+                  <span class="label-up"> GRIDS</span>
+                  <span class="label-up"> GRIDS</span>
+               </h1>
+          <div class="image-div relative overflow-hidden m-5 lg:w-[27vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+              <img src="../build/assets/img/img3-1.jpg" alt="">
+              <img src="../build/assets/img/img3-2.jpg" alt="">
+          </div>
+          <div class="flex justify-between px-5 py-4">
+              <h1 class="xl:text-xl text-base">
+                  Website Design,  <br class="hidden md:block">
+                  Development
+              </h1>
+              <p class="xl:text-xl text-base">2023</p>
+          </div>
+          <hr class="h-[1px] bg-white mx-5">
+          </div>
+
+          <div class="md:mt-4 mt-2 lg:mt-0">
+              <h1 class="button xl:text-4xl text-2xl px-5">
+                  <span class="label-up"> DAVID LAXER</span>
+                  <span class="label-up"> DAVID LAXER</span>
+               </h1>
+          <div class="image-div relative overflow-hidden m-5 lg:w-[27vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+              <img src="../build/assets/img/img4-1.jpg" alt="">
+              <img src="../build/assets/img/img4-2.jpg" alt="">
+          </div>
+          <div class="flex justify-between px-5 py-4">
+              <h1 class="xl:text-xl text-base">
+                 Website Design, <br class="hidden md:block">
+                  Development
+              </h1>
+              <p class="xl:text-xl text-base">2023</p>
+          </div>
+          <hr class="h-[1px] bg-white mx-5">
+          </div>
+
+         <!-- thired row  -->
+
+          <div class="lg:-mt-16 md:mt-4 mt-2">
+              <h1 class="button xl:text-4xl text-2xl px-5">
+                  <span class="label-up"> ÉMINENTE</span>
+                  <span class="label-up"> ÉMINENTE</span>
+               </h1>
+          <div class="image-div relative overflow-hidden m-5 lg:w-[22vw] lg:h-[29vw] md:w-[28vw] md:h-[32vw] w-full h-[50vw]">
+              <img src="../build/assets/img/Éminente_First.png" alt="">
+              <img src="../build/assets/img/img3-2.jpg" alt="">
+          </div>
+          <div class="flex justify-between px-5 py-4">
+              <h1 class="xl:text-xl text-base">
+                  Website Design,  <br class="hidden md:block">
+                  Development
+              </h1>
+              <p class="xl:text-xl text-base">2023</p>
+          </div>
+          <hr class="h-[1px] bg-white mx-5">
+          </div>
+
+          <div class="hidden lg:block">
+          <div class="page3-circle4 mt-96 mx-10">
+              <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+                  <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+                  <div class="circle-in">
+                      <p class="text-black text-base font-bold text-center">This one is special 🖤</p>
+                  </div> 
+          </div>
+      </div>
+
+          <div class="md:mt-20 mt-2">
+              <h1 class="button xl:text-4xl text-2xl px-5">
+                  <span class="label-up"> WONDERWALL STUDIO</span>
+                  <span class="label-up"> WONDERWALL STUDIO</span>
+               </h1>
+             
+          <div class="image-div relative overflow-hidden m-5 xl:w-[32vw] lg:w-[29vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+              <img src="../build/assets/img/Wonderwall_1.png" alt="">
+              <img src="../build/assets/img/img4-2.jpg" alt="">
+          </div>
+          <div class="flex justify-between px-5 py-4">
+              <h1 class="xl:text-xl text-base">
+                 Website Design, <br class="hidden md:block">
+                  Development
+              </h1>
+              <p class="xl:text-xl text-base">2023</p>
+          </div>
+          <hr class="h-[1px] bg-white mx-5">
+          </div>
+
+          <!-- fourth row  -->
+
+           <div class="flex md:flex-row flex-col md:pt-56">
+
+          <div class="mt-2 md:mt-0">
+              <h1 class="button xl:text-4xl text-2xl px-5">
+                  <span class="label-up">  OCHI</span>
+                  <span class="label-up">  OCHI</span>
+               </h1>
+          <div class="image-div relative overflow-hidden m-5 lg:w-[22vw] lg:h-[24vw] md:w-[28vw] md:h-[30vw] w-full h-[50vw]">
+              <img src="../build/assets/img/img1-1.jpg" alt="">
+              <img src="../build/assets/img/img1-2.jpg" alt="">
+          </div>
+          <div class="flex justify-between px-5 py-4">
+          <h1 class="xl:text-xl text-base">
+              logo Design, Website Design, <br>
+              Development
+          </h1>
+          <p class="xl:text-xl text-base">2023</p>
+      </div>
+      <hr class="h-[1px] bg-white mx-5">
+      </div>
+
+      <div class="mt-2 md:mt-0">
+          <h1 class="button xl:text-4xl text-2xl px-5">
+              <span class="label-up">  MAKHNO</span>
+              <span class="label-up">  MAKHNO</span>
+           </h1>
+          <div class="image-div relative overflow-hidden m-5 lg:w-[27vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+              <img src="../build/assets/img/img2-1.jpg" alt="">
+              <img src="../build/assets/img/img2-2.jpg" alt="">
+          </div>
+          <div class="flex justify-between px-5 py-4">
+              <h1 class="xl:text-xl text-base">
+                  logo Design, Website Design, <br>
+                  Development
+              </h1>
+              <p class="xl:text-xl text-base">2024</p>
+          </div>
+          <hr class="h-[1px] bg-white mx-5">
+      </div>
+
+      <div class="hidden lg:block">
+          <div class="page3-circle1  lg:ml-32">
+              <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+                  <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+              <div class="circle-in">
+                  <p class="text-black text-base font-bold">What is your favorite one? 😉</p>
+              </div>    
+          </div>
+      </div>
+
+      </div>
+
+      <!-- fifth row  -->
+      <div class="hidden lg:block">
+      <div class="page3-circle2">
+          <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+              <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+              <div class="circle-in">
+                  <p class="text-black text-base font-bold text-center">Not typical project for us 🤓</p>
+              </div> 
+      </div>
+  </div>
+
+      <div class="pt-20">
+          <h1 class="button xl:text-4xl text-2xl px-5">
+              <span class="label-up"> PORCHAE  TAYCAN</span>
+              <span class="label-up"> PORCHAE  TAYCAN</span>
+           </h1>
+      <div class="image-div relative overflow-hidden m-5 lg:w-[27vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+          <img src="../build/assets/img/img3-1.jpg" alt="">
+          <img src="../build/assets/img/img3-2.jpg" alt="">
+      </div>
+      <div class="flex justify-between px-5 py-4">
+          <h1 class="xl:text-xl text-base">
+              Website Design,  <br class="hidden md:block">
+              Development
+          </h1>
+          <p class="xl:text-xl text-base">2023</p>
+      </div>
+      <hr class="h-[1px] bg-white mx-5">
+      </div>
+
+      <div class="lg:-mt-20 md:mt-4 mt-2">
+          <h1 class="button xl:text-4xl text-2xl px-5">
+              <span class="label-up">TYPOGRAPHY </span>
+              <span class="label-up">TYPOGRAPHY </span>
+           </h1>
+      <div class="image-div relative overflow-hidden m-5 lg:w-[27vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+          <img src="../build/assets/img/img4-1.jpg" alt="">
+          <img src="../build/assets/img/img4-2.jpg" alt="">
+      </div>
+      <div class="flex justify-between px-5 py-4">
+          <h1 class="xl:text-xl text-base">
+             Website Design, <br class="hidden md:block">
+              Development
+          </h1>
+          <p class="xl:text-xl text-base">2023</p>
+      </div>
+      <hr class="h-[1px] bg-white mx-5">
+      </div>
+
+      <!-- sixth row  -->
+
+
+      <div class="lg:-mt-16 md:mt-4 mt-2">
+          <h1 class="button xl:text-4xl text-2xl px-5">
+              <span class="label-up"> YAROFLASHER</span>
+              <span class="label-up"> YAROFLASHER</span>
+           </h1>
+      <div class="image-div relative overflow-hidden m-5 lg:w-[22vw] lg:h-[29vw] md:w-[28vw] md:h-[32vw] w-full h-[50vw]">
+          <img src="../build/assets/img/Éminente_First.png" alt="">
+          <img src="../build/assets/img/img3-2.jpg" alt="">
+      </div>
+      <div class="flex justify-between px-5 py-4">
+          <h1 class="xl:text-xl text-base">
+              Website Design,  <br class="hidden md:block">
+              Development
+          </h1>
+          <p class="xl:text-xl text-base">2023</p>
+      </div>
+      <hr class="h-[1px] bg-white mx-5">
+      </div>
+
+      <div class="hidden lg:block">
+      <div class="page3-circle4 mt-96 mx-10">
+          <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+              <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+              <div class="circle-in">
+                  <p class="text-black text-base font-bold text-center">Could share your thoughts about this website? 😉</p>
+              </div> 
+      </div>
+  </div>
+
+      <div class="md:mt-10 mt-2">
+          <h1 class="button xl:text-4xl text-2xl px-5">
+              <span class="label-up"> PETER LINDBERGH</span>
+              <span class="label-up"> PETER LINDBERGH</span>
+           </h1>
+      <div class="image-div relative overflow-hidden m-5 xl:w-[32vw] lg:w-[29vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+          <img src="../build/assets/img/Wonderwall_1.png" alt="">
+          <img src="../build/assets/img/img4-2.jpg" alt="">
+      </div>
+      <div class="flex justify-between px-5 py-4">
+          <h1 class="xl:text-xl text-base">
+             Website Design, <br class="hidden md:block">
+              Development
+          </h1>
+          <p class="xl:text-xl text-base">2023</p>
+      </div>
+      <hr class="h-[1px] bg-white mx-5">
+      </div>
+
+      <!-- 8th row  -->
+      <div class="flex md:flex-row flex-col pt-20">
+      <div>
+          <h1 class="button xl:text-4xl text-2xl px-5">
+              <span class="label-up"> ANASTASIIA</span>
+              <span class="label-up"> ANASTASIIA</span>
+           </h1>
+      <div class="image-div relative overflow-hidden m-5 lg:w-[22vw] lg:h-[24vw] md:w-[28vw] md:h-[30vw] w-full h-[50vw]">
+          <img src="../build/assets/img/img1-1.jpg" alt="">
+          <img src="../build/assets/img/img1-2.jpg" alt="">
+      </div>
+      <div class="flex justify-between px-5 py-4">
+      <h1 class="xl:text-xl text-base">
+          logo Design, Website Design, <br>
+          Development
+      </h1>
+      <p class="xl:text-xl text-base">2023</p>
+  </div>
+  <hr class="h-[1px] bg-white mx-5">
+  </div>
+
+  <div class="mt-2 md:mt-0">
+      <h1 class="button xl:text-4xl text-2xl px-5">
+          <span class="label-up"> COLOR COMBINATION</span>
+          <span class="label-up"> COLOR COMBINATION</span>
+       </h1>
+      <div class="image-div relative overflow-hidden m-5 lg:w-[34vw] lg:h-[40vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+          <img src="../build/assets/img/img2-1.jpg" alt="">
+          <img src="../build/assets/img/img2-2.jpg" alt="">
+      </div>
+      <div class="flex justify-between px-5 py-4">
+          <h1 class="xl:text-xl text-base">
+              logo Design, Website Design, <br>
+              Development
+          </h1>
+          <p class="xl:text-xl text-base">2024</p>
+      </div>
+      <hr class="h-[1px] bg-white mx-5">
+  </div>
+
+  <div class="hidden lg:block">
+      <div class="page3-circle1 lg:ml-20">
+          <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+              <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+          <div class="circle-in">
+              <p class="text-black text-base font-bold">The best is yet to come 🙃</p>
+          </div>    
+      </div>
+  </div>
+</div>
+
+  <!-- 9th row  -->
+  <div class="flex md:flex-row flex-col pt-20">
+  <div>
+      <h1 class="button xl:text-4xl text-2xl px-5">
+          <span class="label-up"> LOGOFOLIO 2019</span>
+          <span class="label-up"> LOGOFOLIO 2019</span>
+       </h1>
+     
+  <div class="image-div relative overflow-hidden m-5 lg:w-[22vw] lg:h-[24vw] md:w-[28vw] md:h-[30vw] w-full h-[50vw]">
+      <img src="../build/assets/img/img1-1.jpg" alt="">
+      <img src="../build/assets/img/img1-2.jpg" alt="">
+  </div>
+  <div class="flex justify-between px-5 py-4">
+  <h1 class="xl:text-xl text-base">
+      logo Design, Website Design, <br>
+      Development
+  </h1>
+  <p class="xl:text-xl text-base">2023</p>
+</div>
+<hr class="h-[1px] bg-white mx-5">
+  </div>
+
+  <div class="mt-2 md:mt-0">
+  <h1 class="button xl:text-4xl text-2xl px-5">
+      <span class="label-up"> XFIVE</span>
+      <span class="label-up"> XFIVE</span>
+   </h1>
+  <div class="image-div relative overflow-hidden m-5 lg:w-[34vw] lg:h-[40vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+      <img src="../build/assets/img/img2-1.jpg" alt="">
+      <img src="../build/assets/img/img2-2.jpg" alt="">
+  </div>
+  <div class="flex justify-between px-5 py-4">
+      <h1 class="xl:text-xl text-base">
+          logo Design, Website Design, <br>
+          Development
+      </h1>
+      <p class="xl:text-xl text-base">2024</p>
+  </div>
+  <hr class="h-[1px] bg-white mx-5">
+  </div>
+
+</div>
+          
+  
+      
+      </div>
+
+  </div>
+
+
+
+
+ <!-- text animation  -->
+
+ <div id="page5" class="relative w-full" data-scroll >
+    <div class="page5-elem" class="overflow-x-hidden -mb-10">
+        <h1><span>Sport</span> -Fashion- <span>Technology</span> -</h1>
+        <h1><span>Sport</span> -Fashion- <span>Technology</span> -</h1>
+        
+    </div>
+    <div class="page5-elem2">
+        <h1>Science- <span>Partners</span> -Travel-</h1>
+        <h1>Science- <span>Partners</span> -Travel-</h1>
+    </div>
+    <div class="page5-elem">
+        <h1><span>Sport</span> -Fashion- <span>Technology</span> -</h1>
+        <h1><span>Sport</span> -Fashion- <span>Technology</span> -</h1>
+    </div>
+    <div class="page5-elem2">
+        <h1>Science- <span>Partners</span> -Travel-</h1>
+        <h1>Science- <span>Partners</span> -Travel-</h1>
+    </div>
+
+</div>
+
+
+<!-- footer  -->
+
+<div id="footer" class="relative w-full xl:pl-96 lg:pl-64 mt-24 lg:pr-10" data-scroll>
+    <div id="footer-text" class="relative flex items-center md:justify-start justify-between md:ml-10 ml-6">
+        <h1 class="relative uppercase xl:text-8xl lg:text-6xl text-4xl">Let's Create</h1>
+        <h2 class="absolute left-0 uppercase font-medium xl:text-8xl lg:text-6xl text-4xl">Let's Create</h2> &nbsp;&nbsp;
+        <img src="../build/assets/img/arrow.png" alt="">
+
+    </div>
+    <div class="underlines"></div>
+    <div id="footer-div" class="flex md:justify-between gap-8 md:gap-0 xl:pr-48 md:px-10 px-4 pt-8 mb-6">
+        <div id="box">
+            <h6 class="md:text-2xl text-lg font-medium mb-5">Socials</h6>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Dribble</span>
+                <span class="label-up">Dribble</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Behance</span>
+                <span class="label-up">Behance</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Instagram</span>
+                <span class="label-up">Instagram</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Facebook</span>
+                <span class="label-up">Facebook</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Twitter</span>
+                <span class="label-up">Twitter</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Youtube</span>
+                <span class="label-up">Youtube</span>
+            </h5>
+        </div>
+        <div id="box">
+        <h6 class="md:text-2xl text-lg font-medium mb-5">Address</h6>
+            <h5 class="md:text-lg text-sm font-medium">Pushkinska 5
+                61057 Kharkiv <br class="md:hidden block">
+                Ukraine
+            </h5>
+        </div>
+        <div id="box" class="w-1/5">
+            <h6 class="md:text-2xl text-lg font-medium mb-5">Say Hi!</h6>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up underline">info@obys.agency</span>
+                <span class="label-up">info@obys.agency</span>
+            </h5>
+        </div>
+    </div>
+    <div class="underlinee"></div>
+    
+    <h5 class="text-lg font-medium text-center">Obys Agency, ©️2023</h5>
+
+</div>
+
+
+</div>
+</main>
+
+
+
+
+ <!-- Matrix animation js start -->
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const matrixContainer = document.querySelector('.matrix');
+      const columns = Math.floor(window.innerWidth / 20);
+      const rows = Math.floor(window.innerHeight / 20);
+      for (let i = 0; i < columns; i++) {
+        for (let j = 0; j < rows; j++) {
+          const span = document.createElement('span');
+          span.style.left = `${i * 20}px`;
+          span.style.top = `${j * 20}px`;
+          span.style.animationDelay = `${Math.random() * 5}s`;
+          span.textContent = generateRandomCharacter();
+          matrixContainer.appendChild(span);
+        }
+      }
+      function generateRandomCharacter() {
+        const characters = 'ABCDEF0123456789*';
+        return characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+    });
+
+  </script>
+  <!-- Matrix animation js end -->
+
+
+
+<script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--Scroll Trigger-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<!-- j query
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+
+
+<!-- Three.js is needed for 3d Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+<!-- ControlKit is needed for Debug Panel -->
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script><!--Sherry js ka script-->
+
+<script src="../build/assets/index.js"></script>
+
+</body>
+</html>

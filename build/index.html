@@ -1,0 +1,509 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codegridzero-Home</title>
+  <link rel="icon" type="image/x-icon" href="../build/assets/img/favicon.png">
+
+  <link href="
+  https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css
+  " rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />  <!-- Shery Js -->
+  <!-- remix icon cdn -->
+  <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+  rel="stylesheet"/>
+
+
+  <link href="./assets/css/output.css" rel="stylesheet">
+
+</head>
+<body>
+  
+  <!-- curser  -->
+  <div id="crsr"></div> 
+
+  <!-- loader  -->
+  <div id="loader" class="matrix 2xl:px-48 xl:px-44 px-6 py-24 xl:py-48"> 
+    <div class="absolute z-[9999]">  
+    <div class="line">
+        <div id="line1-part1">
+            <h5 class="lg:text-5xl md:text-2xl text-xl italic font-thin">00</h5>
+            <h6 class="lg:text-5xl md:text-2xl text-xl font-thin italic ">- 100</h6>
+        </div>  
+        <h1 class="lg:text-[80px] 2xl:text-9xl md:text-6xl text-3xl font-bold uppercase">Your</h1>
+    </div>
+    <div class="line">
+        <h1 class="lg:text-[80px] 2xl:text-9xl md:text-6xl  text-3xl font-bold uppercase">Web experiences</h1>
+    </div>
+    <div class="line">
+        <h1 class="lg:text-[80px] 2xl:text-9xl md:text-6xl  text-3xl font-bold uppercase "> is Loading right </h1>
+        <h2 class="xl:text-[75px] 2xl:text-8xl lg:text-6xl md:text-4xl text-2xl font-bold uppercase ">Now</h2>
+    </div>
+    <div class="text-base 2xl:text-xl text-start pl-32 pt-10 font-semibold">
+        Please wait <br> a 
+       few second
+    </div>
+</div>
+</div>
+
+<main>
+<!-- main  -->
+<div id="main" class="bg-[#151515] relative">
+
+         <!-- navbar  -->
+         <div id="page1" class="relative w-full h-[100vh] z-[100]" data-scroll >
+            <div>
+            <div id="nav" class="relative flex items-center justify-between p-4 ">
+                <a href="index.html">
+                      <img src="../build/assets/img/logo1.png" class="w-24" alt="">
+                  </a>
+                
+                <button id="menu-toggle" class="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                
+                <div id="nav-part2" class="hidden lg:flex justify-center items-center gap-[3vw]">
+                    <a href="work.html"><h4 class="text-xl font-bold">Works</h4></a>
+                    <a href="about.html"><h4 class="text-xl font-bold">About</h4></a>
+                    <a href="contact.html"><h4 class="text-xl font-bold">Contacts</h4></a>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden lg:hidden flex flex-col items-center shadow-md">
+                <a href="work.html" class="py-2 text-lg font-bold">Works</a>
+                <a href="about.html" class="py-2 text-lg font-bold">About</a>
+                <a href="contact.html" class="py-2 text-lg font-bold">Contacts</a>
+            </div>
+        </div>
+
+          <div class="hero md:w-[70%] w-full md:ml-[27%] mx-5  flex items-center z-[999] overflow-hidden " id="hero1">
+              <h1 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center lg:text-start">We Design</h1>
+          </div>
+          <div class="hero md:w-[70%] w-full md:ml-[27%] mx-5  flex items-center z-[999] overflow-hidden" id="hero2">
+              <h1 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center lg:text-start">Unique</h1>
+          </div>
+          <div  class="hero md:w-[70%] w-full md:ml-[27%] mx-5  flex items-center z-[999] overflow-hidden" id="hero3">
+              
+              <h2 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center lg:text-start">Web/</h2>
+              <h2 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center lg:text-start">Graphic</h2>
+              
+          </div>
+          <div class="hero md:w-[70%] w-full md:ml-[27%] mx-5  flex items-center z-[999] overflow-hidden" id="hero4">
+              <h1 class="relative xl:text-8xl lg:text-7xl text-5xl leading-[90px] uppercase font-semibold text-center items-center lg:text-start">Experience</h1>
+          </div>
+          <img id="flag" src="https://obys.agency/wp-content/uploads/2022/03/Flag.jpg" alt="">
+      </div>
+
+      <!-- videi section  -->
+      <div id="page2" class="relative w-full h-[100vh]" data-scroll data-scroll-speed="-1">
+        <div id="video-container" class="relative md:left-[28%] w-full md:[1363px] h-[66vh] bg-cover bg-center" style="background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg );">
+            <div id="video-cursor">
+                <i class="ri-play-mini-fill"></i>
+            </div>
+            <!-- <img src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg" alt=""> -->
+            <video  src="/build/assets/img/Obys-Showreel-2022.mp4"></video>
+        </div>
+    </div>
+
+
+
+    <!-- project section  -->
+
+    <div id="page3" class="relative w-full xl:mb-24 px-4 xl:px-10 " data-scroll data-scroll-speed="-1">
+        <h1 id="works" class="relative xl:text-8xl lg:text-6xl text-5xl lg:ml-96 uppercase mb-10">OUR PROJECTS</h1>
+        <div class="underline h-[1px] w-full bg-white lg:ml-96"></div>
+        
+        <div id="image-div-container" class="relative flex xl:p-5"> 
+
+            <!-- first row -->
+            <div class="mt-4 lg:mt-0">
+                <h1 class="button xl:text-4xl text-2xl px-5">
+                   <span class="label-up"> HECO FIELD</span>
+                   <span class="label-up"> HECO FIELD</span>
+                </h1>
+            <div class="image-div relative overflow-hidden m-5 lg:w-[22vw] lg:h-[24vw] md:w-[28vw] md:h-[30vw] w-full h-[50vw]zz">
+                <img src="../build/assets/img/expologo.png" alt="">
+                <img src="../build/assets/img/eco.png" alt="">
+            </div>
+            <div class="flex justify-between px-5 py-4">
+            <h1 class="xl:text-xl text-base">
+                logo Design, Website Design, <br>
+                Development
+            </h1>
+            <p class="text-xl">2023</p>
+        </div>
+        <hr class="h-[1px] bg-white mx-5">
+        </div>
+    </a>
+
+    <a href="https://twin-orpin.vercel.app/
+    ">
+        <div class="md:mt-4 mt-2 lg:mt-0">
+            <h1 class="button xl:text-4xl text-2xl px-5">
+                <span class="label-up"> TWIN3.AI</span>
+                <span class="label-up"> TWIN3.AI</span>
+             </h1>
+            <div class="image-div relative overflow-hidden m-5 lg:w-[27vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+                <img src="../build/assets/img/twinlogo.png" alt="">
+                <img src="../build/assets/img/twin.png" alt="">
+            </div>
+            <div class="flex justify-between px-5 py-4">
+                <h1 class="text-xl">
+                    logo Design, Website Design, <br>
+                    Development
+                </h1>
+                <p class="text-xl">2024</p>
+            </div>
+            <hr class="h-[1px] bg-white mx-5">
+        </div>
+    </a>
+
+        <div class="hidden lg:block">
+            <div class="page3-circle1 xl:ml-32 lg:ml-16">
+                <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+                    <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+                <div class="circle-in">
+                    <p class="text-black text-base font-bold">We’re excited to have you with us and trust you’ve enjoyed the projects so far! 😊❤️</p>
+                </div>    
+            </div>
+        </div>
+
+            <!-- second row  -->
+            <div class="hidden lg:block">
+            <div class="page3-circle2">
+                <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+                    <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+                    <div class="circle-in">
+                        <p class="text-black text-base font-bold text-center">It’s bound to wow you! 😲</p>
+                    </div> 
+            </div>
+        </div>
+
+        <a href="https://star-models-new.vercel.app/
+        ">
+            <div class="pt-20">
+                <h1 class="button xl:text-4xl text-2xl px-5">
+                    <span class="label-up"> STAR MODELS</span>
+                    <span class="label-up"> STAR MODELS</span>
+                 </h1>
+            <div class="image-div relative overflow-hidden m-5 lg:w-[27vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+                <img src="../build/assets/img/starlogo.png" alt="">
+                <img src="../build/assets/img/starmodel.png" alt="">
+            </div>
+            <div class="flex justify-between px-5 py-4">
+                <h1 class="xl:text-xl text-base">
+                    Website Design,  <br class="hidden md:block">
+                    Development
+                </h1>
+                <p class="text-xl">2023</p>
+            </div>
+            <hr class="h-[1px] bg-white mx-5">
+            </div>
+        </a>
+
+        <a href="https://lof-main-our-choice.vercel.app/
+        ">
+            <div class="md:mt-4 mt-2 lg:mt-0" >
+                <h1 class="button xl:text-4xl text-2xl px-5">
+                    <span class="label-up">LOF</span>
+                    <span class="label-up">LOF</span>
+                 </h1>
+            <div class="image-div relative overflow-hidden m-5 lg:w-[27vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+                <img src="../build/assets/img/loflogo1.png" alt="">
+                <img src="../build/assets/img/lof.png" alt="">
+            </div>
+            <div class="flex justify-between px-5 py-4">
+                <h1 class="xl:text-xl text-base">
+                   Website Design, <br class="hidden md:block">
+                    Development
+                </h1>
+                <p class="text-xl">2023</p>
+            </div>
+            <hr class="h-[1px] bg-white mx-5">
+            </div>
+        </a>
+           <!-- thired row  -->
+        <a href="https://fantokken.vercel.app/">
+            <div class="lg:-mt-16 mt-4">
+                <h1 class="button xl:text-4xl text-2xl px-5">
+                    <span class="label-up"> FAN TOKENS</span>
+                    <span class="label-up"> FAN TOKENS</span>
+                 </h1>
+                <h1 class="text-4xl px-5">
+                    
+                </h1>
+            <div class="image-div relative overflow-hidden m-5 lg:w-[22vw] lg:h-[29vw] md:w-[28vw] md:h-[32vw] w-full h-[50vw]">
+                <img src="../build/assets/img/fanbluelogo.png" alt="">
+                <img src="../build/assets/img/fantokkenb.png" alt="">
+            </div>
+            <div class="flex justify-between px-5 py-4">
+                <h1 class="xl:text-xl text-base">
+                    Website Design,  <br class="hidden md:block">
+                    Development
+                </h1>
+                <p class="text-xl">2023</p>
+            </div>
+            <hr class="h-[1px] bg-white mx-5">
+            </div>
+        </a>
+        
+            <div class="hidden lg:block">
+            <div class="page3-circle4 mt-96 mx-10">
+                <svg class="button__arrow" viewBox="0 0 91 118" fill="none">
+                    <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+                    <div class="circle-in">
+                        <p class="text-black text-base font-bold text-center">It features a refined color scheme.😱</p>
+                    </div> 
+            </div>
+        </div>
+
+        <a href="https://pixel-project-phi.vercel.app/">
+            <div class="mt-10">
+                <h1 class="button xl:text-4xl text-2xl px-5">
+                    <span class="label-up">PIXEL PROFILE</span>
+                    <span class="label-up">PIXEL PROFILE</span>
+                 </h1>
+               
+            <div class="image-div relative overflow-hidden m-5 xl:w-[32vw] lg:w-[29vw] lg:h-[38vw] md:w-[35vw] md:h-[41vw] w-full h-[60vw]">
+                <img src="../build/assets/img/pixellogo.png" alt="">
+                <img src="../build/assets/img/pixelprofile.png" alt="">
+            </div>
+            <div class="flex justify-between px-5 py-4">
+                <h1 class="xl:text-xl text-base">
+                   Website Design, <br class="hidden md:block">
+                    Development
+                </h1>
+                <p class="text-xl">2023</p>
+            </div>
+            <hr class="h-[1px] bg-white mx-5">
+            </div>
+        </a>
+           
+            <div class="page3-circle3 lg:w-[23vw] lg:h-[23vw] w-[32vw] h-[32vw] flex relative justify-center items-center bg-[#ffa63d] rounded-[50%] my-36 ml-[35%] hover:scale-[0.97] duration-[0.5s]" >
+                <a href="work.html">
+                    <div class="circle-inn hover:scale-[.97] duration-[0.5s]">
+                        <p id="circle3-text" class="text-white text-base font-bold text-center ">All project <span class="font-thin">(20)</span>
+                        </p>
+                    </div> 
+                </a>
+            </div>
+      
+        
+        </div>
+
+    </div>
+
+
+    <!-- about section  -->
+    <div id="page4" class="relative w-full " data-scroll > 
+        <div id="page4-content" class="relative xl:ml-[28%] lg:ml-[25%] md:ml-[10%] lg:w-[73vw] w-full">
+            <h1 id="about-obys" class="xl:text-7xl lg:text-6xl text-5xl relative uppercase pl-4 md:pl-0 font-normal">About CodeGridZero</h1>
+            <div class="underline"></div>
+            <div id="intro" class="xl:text-2xl text-2xl text-center md:text-start text-white lg:w-2/3 xl:w-1/2 w-full mb-24">
+                <h2 >CodeGridzro is a boutique company</h2>
+                <h2>focused on designing and developing </h2>
+                <h2>innovative, high-quality digital solutions.</h2>
+                <h2>More than just a company, we are a space</h2>
+                <h2>where creativity, growth, and collaboration thrive.</h2>
+                <h2>We learn continuously, achieve with purpose,
+                </h2>
+                <h2>and celebrate every success together.
+                </h2>   
+            </div>
+            <div id="page4-flex" class="flex">
+                <img  id="page4-flex-img" src="../build/assets/img/page4_award_img.jpg" class="w-1/2" alt="">
+                <p class="lg:text-base text-sm text-white xl:w-1/5 md:w-1/4 w-2/5 lg:ml-10 ml-4">We’re excited to introduce our new Company along with the updated edition of CodeGridZero.
+                    As always, we remain open to new projects across the globe!
+                <br><br>
+                If you’re looking for an award-winning website or a distinctive branding identity,
+                feel free to reach out to our manager — info@codegridzero.com.
+                We’d be delighted to assist you.
+                </p>
+            </div>
+         
+        <div id="page4-blue-div" class="bg-blue-600 relative xl:ml-[350px] md:ml-48 md:w-1/2 w-full xl:-mt-52 md:-mt-28 px-6 py-8">
+            <div class="blue-div-elem">
+                <h4 class="text-4xl">Awwwards x16</h4>
+                <p class="text-base">SOTM, SOTD and Honrable Mentions</p>
+            </div>
+            <div class="blue-div-elem">
+                <h4 class="text-4xl">FWA x11</h4>
+                <p class="text-base">FWA of The Day</p>
+            </div>
+            <div class="blue-div-elem">
+                <h4 class="text-4xl">CSSDA x23</h4>
+                <p class="text-base">WOTM, WOTD and UI, UX, Innovation</p>
+            </div>
+            <div class="blue-div-elem">
+                <h4 class="text-4xl">Behance x25</h4>
+                <p class="text-base">Interaction, Graphic Design</p>
+            </div>
+            <div class="blue-div-elem">
+                <h4 class="text-4xl">The Very Best Of x7</h4>
+                <p class="text-base">The Very Best Of, Best Of</p>
+            </div>
+        </div>
+    <div id="page4-bottom-underline" class="underline"></div>
+        
+    </div>
+ </div>
+
+
+ <!-- text animation  -->
+
+ <div id="page5" class="relative w-full" data-scroll >
+    <div class="page5-elem" class="overflow-x-hidden -mb-10">
+        <h1><span>Sport</span> -Fashion- <span>Technology</span> -</h1>
+        <h1><span>Sport</span> -Fashion- <span>Technology</span> -</h1>
+        
+    </div>
+    <div class="page5-elem2">
+        <h1>Science- <span>Partners</span> -Travel-</h1>
+        <h1>Science- <span>Partners</span> -Travel-</h1>
+    </div>
+    <div class="page5-elem">
+        <h1><span>Sport</span> -Fashion- <span>Technology</span> -</h1>
+        <h1><span>Sport</span> -Fashion- <span>Technology</span> -</h1>
+    </div>
+    <div class="page5-elem2">
+        <h1>Science- <span>Partners</span> -Travel-</h1>
+        <h1>Science- <span>Partners</span> -Travel-</h1>
+    </div>
+
+</div>
+
+
+<!-- footer  -->
+
+<div id="footer" class="relative w-full xl:pl-96 lg:pl-64 mt-24 lg:pr-10 px-5 lg:px-0" data-scroll>
+    <div id="footer-text" class="relative flex items-center md:gap-10 md:justify-start ">
+        <h1 class="relative uppercase xl:text-8xl lg:text-6xl text-4xl">Let's Create</h1>
+        <h2 class="absolute left-0 uppercase font-medium xl:text-8xl lg:text-6xl text-4xl">Let's Create</h2> &nbsp;&nbsp;
+        <img src="../build/assets/img/arrow.png" alt="">
+
+    </div>
+    <div class="underlines"></div>
+    <div id="footer-div" class="flex md:justify-between gap-8 md:gap-0 xl:pr-48 pt-8 mb-6">
+        <div id="box">
+            <h6 class="md:text-2xl text-lg font-medium mb-5">Socials</h6>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Dribble</span>
+                <span class="label-up">Dribble</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Behance</span>
+                <span class="label-up">Behance</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Instagram</span>
+                <span class="label-up">Instagram</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Facebook</span>
+                <span class="label-up">Facebook</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Twitter</span>
+                <span class="label-up">Twitter</span>
+            </h5>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up">Youtube</span>
+                <span class="label-up">Youtube</span>
+            </h5>
+        </div>
+        <div id="box">
+        <h6 class="md:text-2xl text-lg font-medium mb-5">Address</h6>
+            <h5 class="md:text-lg text-sm font-medium">Hafiz Street Near Govt. College 
+                <br> Boys New Cvil Line sheikhupura .
+            </h5>
+        </div>
+        <div id="box" class="w-1/3">
+            <h6 class="md:text-2xl text-lg font-medium mb-5">Say Hi!</h6>
+            <h5 class="button md:text-lg text-sm font-medium">
+                <span class="label-up underline">info@codegridzero.com</span>
+                <span class="label-up">info@codegridzero.com</span>
+            </h5>
+        </div>
+    </div>
+    <div class="underlinee my-4"></div>
+    
+    <h5 class="text-lg font-medium text-center">Codegridzero, ©️2023</h5>
+
+</div>
+<br>
+<br>
+
+</div>
+</main>
+
+
+
+ <!-- Matrix animation js start -->
+ <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const matrixContainer = document.querySelector('.matrix');
+      const columns = Math.floor(window.innerWidth / 20);
+      const rows = Math.floor(window.innerHeight / 20);
+      for (let i = 0; i < columns; i++) {
+        for (let j = 0; j < rows; j++) {
+          const span = document.createElement('span');
+          span.style.left = `${i * 20}px`;
+          span.style.top = `${j * 20}px`;
+          span.style.animationDelay = `${Math.random() * 5}s`;
+          span.textContent = generateRandomCharacter();
+          matrixContainer.appendChild(span);
+        }
+      }
+      function generateRandomCharacter() {
+        const characters = 'ABCDEF0123456789*';
+        return characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+    });
+
+  </script>
+  <!-- Matrix animation js end -->
+
+<!-- navbar  -->
+
+  <script>
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+</script>
+
+<script src="
+https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js
+"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--Scroll Trigger-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<!-- j query
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+
+
+<!-- Three.js is needed for 3d Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+<!-- ControlKit is needed for Debug Panel -->
+<script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+<script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script><!--Sherry js ka script-->
+
+<script src="../build/assets/index.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
