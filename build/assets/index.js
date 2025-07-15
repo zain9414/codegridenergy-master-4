@@ -1,105 +1,45 @@
+// ✅ Fully Optimized Animation Code
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    // Step 1: Start loader animation only
-    loadingAnimation();
+  // Step 1: Start loader animation immediately
+  loadingAnimation();
 
-    // Step 2: Delay heavy effects until loader almost ends
+  // Step 2: Schedule heavy animations after loader fades
+  const animations = [
+    { delay: 1800, fn: locomotiveAnimation },
+    { delay: 2200, fn: crsrAnimation },
+    { delay: 2400, fn: flagAnimation },
+    { delay: 2700, fn: page4Animation },
+    { delay: 3000, fn: sheryAnimation },
+    { delay: 3300, fn: footerAnimation },
+    { delay: 3500, fn: () => ScrollTrigger?.refresh?.() },
+  ];
+
+  animations.forEach(({ delay, fn }) => {
     setTimeout(() => {
-      try { locomotiveAnimation(); } catch (e) { console.warn("locomotiveAnimation error:", e); }
-    }, 1800); // after loader done
-
-    setTimeout(() => {
-      try { crsrAnimation(); } catch (e) { console.warn("crsrAnimation error:", e); }
-    }, 2200);
-
-    setTimeout(() => {
-      try { flagAnimation(); } catch (e) { console.warn("flagAnimation error:", e); }
-    }, 2400);
-
-    setTimeout(() => {
-      try { page4Animation(); } catch (e) { console.warn("page4Animation error:", e); }
-    }, 2700);
-
-    setTimeout(() => {
-      try { sheryAnimation(); } catch (e) { console.warn("sheryAnimation error:", e); }
-    }, 3000);
-
-    setTimeout(() => {
-      try { footerAnimation(); } catch (e) { console.warn("footerAnimation error:", e); }
-    }, 3300);
-
-    // Final: ScrollTrigger refresh
-    setTimeout(() => {
-      if (typeof ScrollTrigger !== "undefined") {
-        ScrollTrigger.refresh();
-      }
-    }, 3500);
-
-  }, 50); // allow paint
-});
-
-tl.to("#loader", {
-  opacity: 0,
-  duration: 0.2,
-  delay: 1.0, // small delay, not 3s
-});
-
-function locomotiveAnimation() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true
+      try { fn(); } catch (e) { console.warn(`${fn.name} error:`, e); }
+    }, delay);
   });
-
-  locoScroll.on("scroll", ScrollTrigger.update);
-
-  ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-      return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight
-      };
-    },
-    pinType:
-      getComputedStyle(document.querySelector("#main")).transform !== "none"
-        ? "transform"
-        : "fixed"
-  });
-
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-  ScrollTrigger.refresh();
-}
+});
 
 function loadingAnimation() {
   const tl = gsap.timeline();
+
   tl.from(".line h1", {
     y: 150,
     stagger: 0.25,
     duration: 0.4,
-    delay: 0.1 // reduced delay
+    delay: 0.1
   });
 
   tl.from("#line1-part1", {
     opacity: 0,
-    onStart: function () {
-      const h5timer = document.querySelector("#line1-part1 h5");
-      let grow = 0;
-      const interval = setInterval(function () {
-        if (grow < 100) {
-          h5timer.innerHTML = grow++;
-        } else {
-          h5timer.innerHTML = grow;
-          clearInterval(interval);
-        }
-      }, 10); // faster count
+    onStart: () => {
+      const h5 = document.querySelector("#line1-part1 h5");
+      let count = 0;
+      const interval = setInterval(() => {
+        if (count <= 100) h5.textContent = count++;
+        else clearInterval(interval);
+      }, 10);
     }
   });
 
@@ -111,7 +51,7 @@ function loadingAnimation() {
   tl.to("#loader", {
     opacity: 0,
     duration: 0.1,
-    delay: 1.2 // faster loader exit
+    delay: 1.2
   });
 
   tl.from("#page1", {
@@ -122,18 +62,42 @@ function loadingAnimation() {
     ease: Power4
   });
 
-  tl.to("#loader", {
-    display: "none"
-  });
-
-  tl.from("#nav", {
-    opacity: 0
-  });
-
+  tl.set("#loader", { display: "none" });
+  tl.from("#nav", { opacity: 0 });
   tl.from("#hero1 h1, #hero2 h1, #hero3 h2, #hero4 h1", {
     y: 100,
     stagger: 0.2
   });
+}
+
+function locomotiveAnimation() {
+  gsap.registerPlugin(ScrollTrigger);
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true
+  });
+
+  locoScroll.on("scroll", ScrollTrigger.update);
+
+  ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+      return value !== undefined
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    },
+    pinType: getComputedStyle(document.querySelector("#main")).transform !== "none" ? "transform" : "fixed"
+  });
+
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  ScrollTrigger.refresh();
 }
 
 function crsrAnimation() {
@@ -142,39 +106,39 @@ function crsrAnimation() {
     ease: "cubic-bezier(0.23,1,0.320,1)",
     duration: 1
   });
+
   Shery.makeMagnet("#nav-part2 h4");
 
-  const videoContainer = document.querySelector("#video-container");
-  const videoPlay = document.querySelector("#video-container video");
+  const container = document.querySelector("#video-container");
+  const video = container.querySelector("video");
+  let flag = 0;
 
-  videoContainer.addEventListener("mouseenter", function () {
-    videoContainer.addEventListener("mousemove", function (dets) {
+  container.addEventListener("mouseenter", () => {
+    container.addEventListener("mousemove", (e) => {
       gsap.to(".mousefollower", { opacity: 0 });
       gsap.to("#video-cursor", {
-        left: dets.x - 500,
-        y: dets.y - 210
+        left: e.x - 500,
+        y: e.y - 210
       });
     });
   });
 
-  let flag = 0;
-  videoContainer.addEventListener("click", function () {
+  container.addEventListener("click", () => {
     if (flag === 0) {
-      videoPlay.play();
-      videoPlay.style.opacity = 1;
+      video.play();
+      video.style.opacity = 1;
       document.querySelector("#video-cursor").innerHTML = `<i class="ri-pause-mini-fill"></i>`;
       gsap.to("#video-cursor", { scale: 0.5 });
-      flag = 1;
     } else {
-      videoPlay.pause();
-      videoPlay.style.opacity = 0;
+      video.pause();
+      video.style.opacity = 0;
       document.querySelector("#video-cursor").innerHTML = `<i class="ri-play-mini-fill"></i>`;
       gsap.to("#video-cursor", { scale: 1 });
-      flag = 0;
     }
+    flag = 1 - flag;
   });
 
-  videoContainer.addEventListener("mouseleave", function () {
+  container.addEventListener("mouseleave", () => {
     gsap.to(".mousefollower", { opacity: 1 });
     gsap.to("#video-cursor", {
       top: "-15%",
@@ -223,113 +187,87 @@ function sheryAnimation() {
 }
 
 function page4Animation() {
-  const tl2 = gsap.timeline();
+  const tl = gsap.timeline();
 
-  function aboutObys() {
-    let texts = "";
-    document.querySelector("#about-obys").textContent.split("").forEach(function (elem) {
-      texts += `<span>${elem}</span>`;
-    });
-    document.querySelector("#about-obys").innerHTML = texts;
+  const textWrap = (selector) => {
+    const el = document.querySelector(selector);
+    if (!el) return;
+    el.innerHTML = [...el.textContent].map(char => `<span>${char}</span>`).join("");
+  };
 
-    tl2.from("#about-obys span", {
-      bottom: 200,
-      opacity: 0,
-      duration: 0.5,
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: "#about-obys span",
-        scroller: "#main",
-        markers: false,
-        start: "top 80%",
-        end: "top 45%",
-        scrub: 2
-      }
-    });
-  }
+  textWrap("#about-obys");
+  document.querySelectorAll("#intro h2").forEach(el => textWrap(el));
 
-  function aboutObysText() {
-    document.querySelectorAll("#intro h2").forEach(function (elem) {
-      let garbage = "";
-      elem.textContent.split("").forEach(function (e) {
-        garbage += `<span>${e}</span>`;
-      });
-      elem.innerHTML = garbage;
-    });
+  tl.from("#about-obys span", {
+    bottom: 200,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#about-obys span",
+      scroller: "#main",
+      start: "top 80%",
+      end: "top 45%",
+      scrub: 2
+    }
+  });
 
-    tl2.to("#page4-content #intro h2 span", {
-      color: "#Ffdb58",
-      stagger: 0.1,
-      scrollTrigger: {
-        trigger: "#intro",
-        scroller: "#main",
-        markers: false,
-        start: "top 50%",
-        end: "top 10%",
-        scrub: 1.25
-      }
-    });
-  }
-
-  aboutObys();
-  aboutObysText();
+  tl.to("#page4-content #intro h2 span", {
+    color: "#Ffdb58",
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: "#intro",
+      scroller: "#main",
+      start: "top 50%",
+      end: "top 10%",
+      scrub: 1.25
+    }
+  });
 }
 
 function flagAnimation() {
-  document.addEventListener("mousemove", function (dets) {
-    gsap.to("#flag", {
-      x: dets.clientX,
-      y: dets.clientY
-    });
+  const flag = document.querySelector("#flag");
+  if (!flag) return;
+
+  document.addEventListener("mousemove", (e) => {
+    gsap.to(flag, { x: e.clientX, y: e.clientY });
   });
 
-  document.querySelector("#hero3").addEventListener("mouseenter", function () {
-    gsap.to("#flag", { opacity: 1 });
+  const hero3 = document.querySelector("#hero3");
+  if (!hero3) return;
+
+  hero3.addEventListener("mouseenter", () => {
+    gsap.to(flag, { opacity: 1 });
   });
 
-  document.querySelector("#hero3").addEventListener("mouseleave", function () {
-    gsap.to("#flag", { opacity: 0 });
+  hero3.addEventListener("mouseleave", () => {
+    gsap.to(flag, { opacity: 0 });
   });
 }
 
 function footerAnimation() {
-  let h1Spans = "";
-  let h2Spans = "";
-  document.querySelector("#footer h1").textContent.split("").forEach(function (elem) {
-    h1Spans += `<span>${elem}</span>`;
-  });
-  document.querySelector("#footer h1").innerHTML = h1Spans;
+  const h1 = document.querySelector("#footer h1");
+  const h2 = document.querySelector("#footer h2");
+  const text = document.querySelector("#footer-text");
 
-  document.querySelector("#footer h2").textContent.split("").forEach(function (elem) {
-    h2Spans += `<span>${elem}</span>`;
-  });
-  document.querySelector("#footer h2").innerHTML = h2Spans;
+  const wrapText = (el) => {
+    if (el) {
+      el.innerHTML = [...el.textContent].map(ch => `<span>${ch}</span>`).join("");
+    }
+  };
 
-  document.querySelector("#footer-text").addEventListener("mouseenter", function () {
-    gsap.to("#footer h1 span", {
-      opacity: 0,
-      duration: 0.3,
-      stagger: 0.05
-    });
-    gsap.to("#footer h2 span", {
-      delay: 0.15,
-      opacity: 1,
-      duration: 0.3,
-      stagger: 0.05
-    });
-  });
+  wrapText(h1);
+  wrapText(h2);
 
-  document.querySelector("#footer-text").addEventListener("mouseleave", function () {
-    gsap.to("#footer h1 span", {
-      opacity: 1,
-      duration: 0.3,
-      stagger: 0.05,
-      delay: 0.15
+  if (text) {
+    text.addEventListener("mouseenter", () => {
+      gsap.to("#footer h1 span", { opacity: 0, duration: 0.3, stagger: 0.05 });
+      gsap.to("#footer h2 span", { opacity: 1, duration: 0.3, stagger: 0.05, delay: 0.15 });
     });
-    gsap.to("#footer h2 span", {
-      opacity: 0,
-      duration: 0.3,
-      stagger: 0.05
+
+    text.addEventListener("mouseleave", () => {
+      gsap.to("#footer h1 span", { opacity: 1, duration: 0.3, stagger: 0.05, delay: 0.15 });
+      gsap.to("#footer h2 span", { opacity: 0, duration: 0.3, stagger: 0.05 });
     });
-  });
+  }
 }

@@ -217,27 +217,26 @@
 
 
  <!-- Matrix animation js start -->
- <script>
+<script>
   document.addEventListener("DOMContentLoaded", () => {
-    const matrixContainer = document.querySelector('.matrix');
+    const matrixContainer = document.querySelector(".matrix");
     const columns = Math.floor(window.innerWidth / 20);
-    const rows = Math.floor(window.innerHeight / 20);
+    const rows = Math.floor(window.innerHeight / 40); // fewer rows = less lag
+
+    const characters = "ABCDEF0123456789*";
+
     for (let i = 0; i < columns; i++) {
       for (let j = 0; j < rows; j++) {
-        const span = document.createElement('span');
+        const span = document.createElement("span");
         span.style.left = `${i * 20}px`;
-        span.style.top = `${j * 20}px`;
-        span.style.animationDelay = `${Math.random() * 5}s`;
-        span.textContent = generateRandomCharacter();
+        span.style.top = `${j * 40}px`;
+        span.style.animationDelay = `${Math.random() * 1.5}s`; // smaller delay
+        span.textContent =
+          characters[Math.floor(Math.random() * characters.length)];
         matrixContainer.appendChild(span);
       }
     }
-    function generateRandomCharacter() {
-      const characters = 'ABCDEF0123456789*';
-      return characters.charAt(Math.floor(Math.random() * characters.length));
-    }
   });
-
 </script>
 <!-- Matrix animation js end -->
 
