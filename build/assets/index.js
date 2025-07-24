@@ -6,9 +6,7 @@ window.addEventListener("load", () => {
     loadingAnimation();
 
     // Step 2: Delay heavy effects until loader almost ends
-    setTimeout(() => {
-      try { locomotiveAnimation(); } catch (e) { console.warn("locomotiveAnimation error:", e); }
-    }, 1800); // after loader done
+ // after loader done
 
     setTimeout(() => {
       try { crsrAnimation(); } catch (e) { console.warn("crsrAnimation error:", e); }
@@ -18,9 +16,6 @@ window.addEventListener("load", () => {
       try { flagAnimation(); } catch (e) { console.warn("flagAnimation error:", e); }
     }, 2400);
 
-    setTimeout(() => {
-      try { page4Animation(); } catch (e) { console.warn("page4Animation error:", e); }
-    }, 2700);
 
     setTimeout(() => {
       try { sheryAnimation(); } catch (e) { console.warn("sheryAnimation error:", e); }
@@ -41,11 +36,7 @@ window.addEventListener("load", () => {
 });
 
 // loader animation
-tl.to("#loader", {
-  opacity: 0,
-  duration: 0.2,
-  delay: 1.0, // small delay, not 3s
-});
+
 
 
 // GSAP me ScrollTrigger 

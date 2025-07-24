@@ -1,9 +1,23 @@
 {
   
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/assets/css/output.css --watch"
+  
+    
+  "tailwind": "npx tailwindcss -i ./src/input.css -o ./build/assets/css/output.css --watch"
+  
   },
+  
   "devDependencies": {
-    "tailwindcss": "^3.4.17"
+  
+    
+  "tailwindcss": "^3.4.17"
+  
+  },
+  
+  "dependencies": {
+  
+    
+  "library-name": "^1.1.0"
+  
   }
 }
