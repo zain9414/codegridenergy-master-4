@@ -1,3 +1,5 @@
+// loader animation
+
 window.addEventListener("load", () => {
   setTimeout(() => {
     // Step 1: Start loader animation only
@@ -38,11 +40,15 @@ window.addEventListener("load", () => {
   }, 50); // allow paint
 });
 
+// loader animation
 tl.to("#loader", {
   opacity: 0,
   duration: 0.2,
   delay: 1.0, // small delay, not 3s
 });
+
+
+// GSAP me ScrollTrigger 
 
 function locomotiveAnimation() {
   gsap.registerPlugin(ScrollTrigger);
@@ -77,6 +83,9 @@ function locomotiveAnimation() {
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
 }
+
+
+// loadingAnimation
 
 function loadingAnimation() {
   const tl = gsap.timeline();
@@ -135,6 +144,8 @@ function loadingAnimation() {
     stagger: 0.2
   });
 }
+  
+// improved Smoothness
 
 function crsrAnimation() {
   Shery.mouseFollower({
@@ -183,6 +194,8 @@ function crsrAnimation() {
   });
 }
 
+// 3D animated appearance
+
 function sheryAnimation() {
   Shery.imageEffect(".image-div", {
     style: 5,
@@ -221,6 +234,8 @@ function sheryAnimation() {
     }
   });
 }
+
+// Text Color Change on Scroll
 
 function page4Animation() {
   const tl2 = gsap.timeline();
@@ -275,6 +290,8 @@ function page4Animation() {
   aboutObysText();
 }
 
+//  element mouse ke sath follow karta hai
+
 function flagAnimation() {
   document.addEventListener("mousemove", function (dets) {
     gsap.to("#flag", {
@@ -291,6 +308,15 @@ function flagAnimation() {
     gsap.to("#flag", { opacity: 0 });
   });
 }
+
+
+/**
+ * footerAnimation()
+ * ------------------
+ * This function animates the footer heading text (h1 and h2) by wrapping each character
+ * in a <span> for individual animation control using GSAP. On mouse enter, it fades out h1 text
+ * and fades in h2 text. On mouse leave, it reverses the effect.
+ */
 
 function footerAnimation() {
   let h1Spans = "";
@@ -333,3 +359,13 @@ function footerAnimation() {
     });
   });
 }
+
+
+
+
+
+
+
+
+
+
